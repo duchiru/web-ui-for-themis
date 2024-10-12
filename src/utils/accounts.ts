@@ -93,7 +93,7 @@ chokidar.watch(ACCOUNTS_FILE).on('change', () => {
 			logger.info('Accounts file changes detected, reloading...');
 			parseAccountsFile();
 		} catch (e) {
-			logger.error("Cannot load data from account file", e);
+			logger.error('Cannot load data from account file', e);
 		}
 	}
 });

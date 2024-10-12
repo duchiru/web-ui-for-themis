@@ -1,7 +1,9 @@
-const db = {
+const languages_mode_db = {
 	cpp: 'c_cpp',
 	c: 'c_cpp',
 	pas: 'pascal',
+	java: 'java',
+	python: 'python',
 };
 const username = document.getElementById('user-id').innerHTML;
 
@@ -32,7 +34,7 @@ logoutButton.onclick = () => {
 
 function handleFileNameChange(name) {
 	const fileExt = name.split('.').at(-1);
-	editor.session.setMode(`ace/mode/${db[fileExt]}`);
+	editor.session.setMode(`ace/mode/${languages_mode_db[fileExt]}`);
 }
 
 fileNameInput.onchange = (e) => handleFileNameChange(e.target.value);
@@ -65,8 +67,6 @@ async function updateProblems() {
 async function updateResults() {
 	const res = await fetch(`/submit/get/${username}`);
 	const results = await res.json();
-
-	console.log(results);
 
 	let rendereds = [];
 	results.map((result) => {
