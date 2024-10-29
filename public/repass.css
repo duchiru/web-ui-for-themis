@@ -1,0 +1,19 @@
+.container {
+	width: fit-content;
+}
+
+.container .body {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+
+.container .body form {
+	text-align: center;
+}
+
+.container .body input {
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+}

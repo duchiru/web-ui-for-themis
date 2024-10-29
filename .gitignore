@@ -1,0 +1,10 @@
+node_modules
+build
+out
+test_class
+*.log
+
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+bun.lockb

@@ -1,0 +1,19 @@
+table {
+	border: 1px solid black;
+}
+
+th {
+	color: #4060a3;
+}
+
+th,
+td {
+	background-color: #96d4d4;
+
+	padding-left: 1rem;
+	padding-right: 1rem;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+
+	min-width: 2rem;
+}

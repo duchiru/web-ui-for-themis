@@ -1,0 +1,16 @@
+{
+  "name": "judger",
+  "description": "Client cho máy chấm",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env DIR=submission ADR=http://localhost:8080/judger node ."
+  },
+  "dependencies": {
+    "axios": "^1.7.7",
+    "chokidar": "^4.0.1"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
+}

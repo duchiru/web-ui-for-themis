@@ -1,0 +1,19 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="/index.css")
+        link(rel="stylesheet", href="/dir-view.css")
+        title= title
+    body 
+        div(class="card file-browser")
+            div(class="title") #{decodeURIComponent(path)}
+            div(class="body")
+                    for e in content
+                        div(class="file-browser-element")
+                            if e.isDir
+                                img(src="/assets/directory.svg", height="17") 
+                            else
+                                img(src="/assets/file.svg", height="17")
+                            a(href=`/problem${e.path}`)= `${e.name}`

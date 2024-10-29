@@ -1,0 +1,7 @@
+{
+	"LOGS_DIR": "logs",
+	"ACCOUNTS_FILE": "accounts.csv",
+	"PROBLEMS_DIR": "problems",
+	"SUBMIT_DIR": "submissions",
+	"ENABLE_SUBMIT_VIEW": true
+}

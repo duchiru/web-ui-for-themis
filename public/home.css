@@ -1,0 +1,146 @@
+html,
+body {
+	margin: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+/* Navbar */
+.navbar {
+	position: fixed;
+	z-index: 31082007;
+	top: 0px;
+	right: 0px;
+	left: 0px;
+
+	height: 3rem;
+	background-color: grey;
+	color: white;
+
+	display: flex;
+	flex-direction: row;
+}
+
+.navbar .title {
+	margin: 1rem;
+	margin-top: 0.75rem;
+	margin-bottom: 0.75rem;
+
+	flex: 0 0 auto;
+}
+
+.navbar .mid-container {
+	width: 100%;
+}
+
+.navbar .actions-area {
+	padding: 0.25rem;
+	display: flex;
+	flex-direction: row;
+	flex: 0 0 auto;
+}
+
+/* Body */
+.container {
+	padding-top: 3rem;
+
+	height: calc(100vh - 3rem);
+
+	display: flex;
+	flex-direction: row;
+
+	gap: 0.125rem;
+}
+
+.container .docs-and-results {
+	width: 30%;
+	display: flex;
+	flex-direction: column;
+	gap: 0.125rem;
+
+	margin-top: 0.125rem;
+	margin-bottom: 0.125rem;
+	margin-left: 0.125rem;
+}
+
+.container .docs-and-results .docs-area {
+	height: 50%;
+	margin: 0px;
+}
+
+.container .docs-and-results .docs-area .body {
+	overflow: auto;
+}
+
+.container .docs-and-results .results-area {
+	height: 50%;
+	margin: 0px;
+}
+
+.container .docs-and-results .results-area .body {
+	overflow: auto;
+}
+
+.container .submit-area {
+	width: 70%;
+
+	display: flex;
+	flex-direction: column;
+	margin-top: 0.125rem;
+	margin-bottom: 0.125rem;
+	margin-right: 0.125rem;
+
+	background-color: #f8f8f8;
+	border: 1px grey solid;
+	border-radius: 5px;
+}
+
+.container .submit-area .remind-area {
+	display: flex;
+	flex-direction: row;
+
+	padding-top: 0.25rem;
+	padding-left: 0.25rem;
+}
+
+.container .submit-area .remind-area .title {
+	font-weight: bold;
+
+	margin-right: 0.25rem;
+}
+
+.container .submit-area .options-area {
+	display: flex;
+	flex-direction: row;
+	margin: 0.125rem;
+	gap: 0.125rem;
+}
+
+.container .submit-area .options-area .file-name {
+	flex: 1 0 auto;
+}
+
+.container .submit-area .ace-editor {
+	flex: 1 0 auto;
+
+	/* background-color: #F8F8F8; */
+	border: 1px grey solid;
+	border-radius: 5px;
+	margin: 0.125rem;
+}
+
+/* Popup user menu */
+.user-menu {
+	position: fixed;
+	z-index: 31082007;
+	top: 3.25rem;
+	right: 1rem;
+
+	background-color: grey;
+	border-radius: 5px;
+
+	padding: 0.25rem;
+
+	display: flex;
+	flex-direction: column;
+}

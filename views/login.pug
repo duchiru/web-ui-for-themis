@@ -1,0 +1,19 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="/index.css")
+        link(rel="stylesheet", href="/login.css")
+        title Đăng nhập vào hệ thống
+    body 
+        div(class="card container")
+            div(class="title") Đăng nhập vào hệ thống
+            div(class="body")
+                form(action="/auth/login", method="post")
+                    input(type="text" id="username" name="username" placeholder="Tên đăng nhập" class="text-input")
+                    br
+                    input(type="password" id="password" name="password" placeholder="Mật khẩu" class="text-input")
+                    br
+                    input(type="submit" id="submit" value="Đăng nhập" class="btn")
+                p(class="failed-msg" style=`color: ${failed ? "red" : "white"}`) Tên đăng nhập hoặc mật khẩu không đúng

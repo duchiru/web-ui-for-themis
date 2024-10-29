@@ -1,0 +1,38 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="/index.css")
+        link(rel="stylesheet", href="/home.css")
+        title Hệ thống nộp bài trực tuyến
+        div(hidden id="user-id")= userId
+    body 
+        div(class="navbar")
+            h3(class="title") Hệ thống nộp bài trực tuyến
+            div(class="mid-container")
+            div(class="actions-area")
+                button(class="btn" id="ranking-btn") Bảng xếp hạng
+                button(class="btn" id="user-btn") #{"Thí sinh: " + username}
+        div(class="container")
+            div(class="docs-and-results")
+                div(class="docs-area card")
+                    div(class="title") Tài liệu / Đề bài
+                    div(class="body" id="doc-files") Đang tải...
+                div(class="results-area card")
+                    div(class="title") Kết quả các bài nộp
+                    div(class="body" id="results") Đang tải...
+            div(class="submit-area")
+                div(class="remind-area")
+                    div(class="title") Dán code vào đây hoặc nạp code từ file:
+                    input(type="file" name="choose-file" class="choose-file" id="choose-file")
+                div(class="ace-editor" id="ace-editor")
+                div(class="options-area")
+                    input(type="text" class="text-input file-name" id="file-name" placeholder="Nhập tên file cần nộp")
+                    button(class="btn submit-btn" id="submit-btn") Nộp bài
+
+        div(id="user-menu" class="user-menu hidden")
+            button(class="btn" id="repass-btn") Đổi mật khẩu
+            button(class="btn" id="logout-btn") Đăng xuất
+        script(src="libs/ace/ace.js") 
+        script(src="home.js") 
