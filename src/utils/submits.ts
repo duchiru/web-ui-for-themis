@@ -73,6 +73,11 @@ export async function getSubmits(user: string) {
 	return submits;
 }
 
+export function getSubmitContent(filename: string) {
+	const filePath = path.join(SUBMIT_DIR, filename);
+	return fs.readFileSync(filePath).toString('utf-8');
+}
+
 export function getSubmitResultContent(submitName: string) {
 	const filePath = path.join(SUBMIT_LOGS_DIR, submitName);
 	return fs.readFileSync(filePath).toString('utf-8');
@@ -140,6 +145,8 @@ function deleteSubmitFile(file: string): void {
 	data.name = elements[1].slice(0, -1);
 
 	delete db[data.user][data.name][data.ext];
+	if (Object.keys(db[data.user][data.name]).length == 0) delete db[data.user][data.name];
+	if (Object.keys(db[data.user]).length == 0) delete db[data.user];
 }
 
 function getSubmitLogOverview(file: string): Promise<string> {

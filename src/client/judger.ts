@@ -20,7 +20,7 @@ judger.get('/one-submission', (_req, res) => {
 
 judger.post('/result/:filename', bodyParser.text(), (req, res) => {
 	createResult(req.params.filename, req.body);
-  res.status(201).end();
+	res.status(201).end();
 });
 
 export default judger;

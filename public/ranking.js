@@ -8,7 +8,7 @@ async function updateRank() {
 	Object.keys(submitsDb).forEach((user) => {
 		if (!data[user]) data[user] = {};
 		Object.keys(submitsDb[user]).forEach((problem) => {
-			let score = 0;
+			let score = -1;
 
 			Object.keys(submitsDb[user][problem]).forEach((ext) => {
 				if (submitsDb[user][problem][ext].judged) {
@@ -27,9 +27,9 @@ async function updateRank() {
 		const scores = Array(headers.length);
 		let sum = 0;
 		for (let i = 0; i < headers.length; i++) {
-			if (data[user][headers[i]]) {
-				scores[i] = data[user][headers[i]];
-				sum += scores[i];
+			if (headers[i] in data[user]) {
+				scores[i] = data[user][headers[i]] < 0 ? 'Chưa chấm' : data[user][headers[i]];
+				sum += Math.max(data[user][headers[i]], 0);
 			} else {
 				scores[i] = '';
 			}
@@ -41,8 +41,8 @@ async function updateRank() {
 	rows.sort((a, b) => b[1] - a[1]);
 	headers = ['Thí sinh', 'Tổng điểm', ...headers];
 
-	const rowsData = [headers, ...rows],
-		renderedRows = [];
+	const rowsData = [headers, ...rows];
+	const renderedRows = [];
 
 	renderedRows[0] = '';
 	for (let i = 0; i < rowsData[0].length; i++) renderedRows[0] += `<th>${rowsData[0][i]}</th>`;

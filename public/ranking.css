@@ -16,4 +16,6 @@ td {
 	padding-bottom: 0.5rem;
 
 	min-width: 2rem;
+
+	white-space: nowrap;
 }

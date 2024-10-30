@@ -78,7 +78,7 @@ async function updateResults() {
 	let rendereds = [];
 	results.map((result) => {
 		rendereds.push(
-			`&bull; <a target="_blank" href="/submit/view/[${username}][${result.name}].${result.ext}.log">${result.name}.${result.ext} (${result.score})</a>`
+			`&bull; <span>${result.name}.${result.ext}</span> <a target="_blank" href="/submit/result/${result.name}/${result.ext}">(${result.score})</a> <a target="_blank" href="/submit/submit/${result.name}/${result.ext}">(Xem lại)</a>`
 		);
 	});
 
